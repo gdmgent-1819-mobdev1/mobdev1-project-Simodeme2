@@ -1,11 +1,22 @@
 {{> header }}
 <div class="page home">
-  <h1>Hello, {{user}}!</h1>
+  <h1>Hallo, {{user}}!</h1>
   <div class="body">
-    This is Home page.<br>
-    Go to <a href="/about" data-path>About page</a><br />
-    Go to <a href="/firebase" data-path>Firebase example page</a><br />
-    Go to <a href="/mapbox" data-path>Mapbox example page</a><br />
+    <div class="section">
+      <div class="login">
+        <form action="" class="login__form">
+          
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Email">
+          <label for="password">Wachtwoord</label>
+          <input type="password" name="password" id="password" placeholder="Wachtwoord">
+          <button id="loginBtn">Inloggen</button>
+        </form>
+      </div>
+    </div>
+    Go to <a href="/about" data-navigo>About page</a><br />
+    Go to <a href="/firebase" data-navigo>Firebase example page</a><br />
+    Go to <a href="/mapbox" data-navigo>Mapbox example page</a><br />
   </div>
 </div>
 {{> footer }}

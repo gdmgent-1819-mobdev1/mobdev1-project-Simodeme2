@@ -15,17 +15,23 @@ export default () => {
   let loading = true;
   let posts = {};
   const title = 'Firebase calls example';
+
+  // const signupBtn = document.getElementById('signupBtn');
+  // function signup() {
+  //   const email = document.getElementById('email.value').value;
+  //   console.log(email);
+  // }
+
+  // if (signupBtn) {
+  //   signupBtn.addEventListener('click', (e) => {
+  //     e.preventDefault();
+  //     signup();
+  //   });
+  // }
   // Return the compiled template to the router
   update(compile(aboutTemplate)({ title, loading, posts }));
 
   if (firebase) {
-    // firebase.auth().createUserWithEmailAndPassword('test@test.com', 'test333').catch((error) => {
-    //   // Handle Errors here.
-    //   const errorCode = error.code;
-    //   const errorMessage = error.message;
-    //   console.log(errorCode,errorMessage);
-    // });
-    
     const database = firebase.database().ref('/posts');
     database.on('value', (snapshot) => {
       posts = snapshot.val();

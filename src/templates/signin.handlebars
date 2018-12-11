@@ -1,0 +1,23 @@
+{{> header }}
+<div class="page home">
+  <div class="body">
+    <div class="section">
+      <div class="login">
+        <h1>{{title}}</h1>
+        <form action="signup" class="signup__form">
+          <div class="form__field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+          </div>
+          <div class="form_field">
+            <label for="password">Wachtwoord</label>
+            <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
+          </div>
+          <button type="button" id="signinBtn" class="signinBtn">Login</button>
+        </form>
+      </div>
+    </div>
+    Go to <a href="#/" data-navigo>Home page</a><br />
+  </div>
+</div>
+{{> footer }}

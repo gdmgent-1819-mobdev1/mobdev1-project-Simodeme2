@@ -13,5 +13,4 @@ export default () => {
 
   // Return the compiled template to the router
   update(compile(signupTemplate)({ title }));
-
 };

@@ -1,0 +1,48 @@
+{{> header }}
+<div class="page home">
+  <div class="body">
+    <div class="section">
+      <div class="register">
+        <h1>{{title}}</h1>
+        <form action="signup_student" class="signup__form">
+          <div class="form__field">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Email" required>
+          </div>
+          <div class="form__field">
+            <label for="first_name">Voornaam</label>
+            <input type="text" name="first_name" id="first_name" placeholder="Voornaam" required>
+            <label for="last_name">Achternaam</label>
+            <input type="text" name="last_name" id="last_name" placeholder="Achternaam" required>
+          </div>
+          <div class="form_field">
+            <label for="password">Wachtwoord</label>
+            <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
+            <label for="confrim_password">Bevestig wachtwoord</label>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Bevestig wachtwoord" required>
+          </div>
+          <div class="form_field">
+            <label for="phone">Telefoonnummer</label>
+            <input type="number" name="phone" id="phone" placeholder="Telefoonnummer" required>
+          </div>
+          <div class="form_field">
+            <label for="street">Straat</label>
+            <input type="text" name="street" id="street" placeholder="Straat" required>
+            <label for="street_number">Huisnummer</label>
+            <input type="number" name="street_number" id="street_number" placeholder="Huisnummer" required>
+          </div>
+          <div class="form_field">
+            <label for="postcode">Postcode</label>
+            <input type="text" name="postcode" id="postcode" placeholder="Postcode" required>
+            <label for="city">Stad</label>
+            <input type="text" name="city" id="city" placeholder="Stad" required>
+          </div>
+          <input type="hidden" id="status" value="kotbaas">
+          <button type="button" id="signupBtn" class="signupBtn">Registreren</button>
+        </form>
+      </div>
+    </div>
+    Go to <a href="/about" data-navigo>About page</a><br />
+  </div>
+</div>
+{{> footer }}

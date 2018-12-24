@@ -21,30 +21,33 @@ export default () => {
   function signup() {
     const getEmail = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const getFirst_name = document.getElementById('first_name').value;
-    const getLast_name = document.getElementById('last_name').value;
+    const getFirstName = document.getElementById('first_name').value;
+    const getLastName = document.getElementById('last_name').value;
     const getPhone = document.getElementById('phone').value;
     const getStreet = document.getElementById('street').value;
-    const getStreet_number = document.getElementById('street_number').value;
+    const getStreetNumber = document.getElementById('street_number').value;
     const getPostcode = document.getElementById('postcode').value;
     const getCity = document.getElementById('city').value;
+    const getSchool = document.getElementById('school').value;
+    const getStatus = document.getElementById('status').value;
 
-
-    firebase.database().ref('users/', getFirst_name).set({
-      first_name: getFirst_name,
-      last_name: getLast_name,
-      email: getEmail,
-      phone: getPhone,
-      street: getStreet,
-      street_number: getStreet_number,
-      postcode: getPostcode,
-      city: getCity,
-
-    });
     firebase.auth().createUserWithEmailAndPassword(getEmail, password)
-      .then(() => {
+      .then((auth) => {
         console.log('Succes');
-        console.log(getFirst_name);
+        console.log(getFirstName);
+        const user = {
+          first_name: getFirstName,
+          last_name: getLastName,
+          email: getEmail,
+          phone: getPhone,
+          street: getStreet,
+          street_number: getStreetNumber,
+          postcode: getPostcode,
+          city: getCity,
+          school: getSchool,
+          status: getStatus,
+        };
+        firebase.database().ref('users/' + auth.user.uid).set(user);
         window.location.replace('#/');
       })
       .catch(() => {

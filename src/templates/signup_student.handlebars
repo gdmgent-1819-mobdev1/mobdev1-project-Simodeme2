@@ -7,7 +7,7 @@
         <form action="signup_student" class="signup__form">
           <div class="form__field">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="text" name="email" id="email" placeholder="Email" required>
           </div>
           <div class="form__field">
             <label for="first_name">Voornaam</label>
@@ -46,8 +46,8 @@
               <option value="3">Artevelde</option>
               <option value="4">KU Leuven</option>
             </select>
-            
           </div>
+          <input type="hidden" id="status" value="student">
           <button type="button" id="signupBtn" class="signupBtn">Registreren</button>
         </form>
       </div>

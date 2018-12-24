@@ -16,6 +16,7 @@ export default () => {
 
   const data = '';
   const noLogin = document.querySelector('.no_login');
+  const noLoginText = document.querySelector('.no_login_text');
   const username = document.querySelector('.username');
   const user = firebase.auth().currentUser;
 
@@ -44,6 +45,9 @@ export default () => {
     <div class="no_login_btn">
       <p><a href="#/signup" data-navigo>Meld je nu aan!</a></p>
     </div>
+    `;
+    noLoginText.innerHTML
+    += `
     <p><i>U bent niet ingelogd.</i></p>
     `;
   }

@@ -1,0 +1,42 @@
+{{> header }}
+<div class="page home">
+  <div class="body">
+    <div class="section">
+      <div class="edit__profile">
+        <form action="signup_student" class="signup__form">
+            <div class="form_field">
+                <label for="phone">Telefoonnummer</label>
+                <input type="number" name="phone" id="phone" placeholder="Telefoonnummer" required>
+            </div>
+            <div class="form_field">
+                <label for="street">Straat</label>
+                <input type="text" name="street" id="street" placeholder="Straat" required>
+                <label for="street_number">Huisnummer</label>
+                <input type="number" name="street_number" id="street_number" placeholder="Huisnummer" required>
+            </div>
+            <div class="form_field">
+                <label for="postcode">Postcode</label>
+                <input type="text" name="postcode" id="postcode" placeholder="Postcode" required>
+                <label for="city">Stad</label>
+                <input type="text" name="city" id="city" placeholder="Stad" required>
+            </div>
+            <div id="school__div" class="form_field">
+                <label for="school">Hogeschool/Universiteit</label>
+                <select name="school" id="school">
+                    <option value="" disabled selected>Kies jouw Hogeschool/Universiteit</option>
+                    <option value="1">HoGent</option>
+                    <option value="2">UGent</option>
+                    <option value="3">Artevelde</option>
+                    <option value="4">KU Leuven</option>
+                </select>
+            </div>
+            <input type="hidden" id="status" value="student">
+        </form>
+      </div>
+      <div class="edit__profile__btn">  
+        <button id="update__btn" class="update__btn">Update profiel</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{> footer }}

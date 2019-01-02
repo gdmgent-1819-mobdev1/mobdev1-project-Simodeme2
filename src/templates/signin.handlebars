@@ -2,9 +2,9 @@
 <div class="page home">
   <div class="body">
     <div class="section">
-      <div class="login">
+      <div class="signin">
         <h1>{{title}}</h1>
-        <form action="signup" class="signup__form">
+        <form action="signin" class="signin__form">
           <div class="form__field">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Email" required>
@@ -13,11 +13,12 @@
             <label for="password">Wachtwoord</label>
             <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
           </div>
-          <button type="button" id="signinBtn" class="signinBtn">Login</button>
+          <div class="signin__btn">
+            <button type="button" id="signin__btn" class="signinBtn">Login</button>
+          </div>
         </form>
       </div>
     </div>
-    Go to <a href="#/" data-navigo>Home page</a><br />
   </div>
 </div>
 {{> footer }}

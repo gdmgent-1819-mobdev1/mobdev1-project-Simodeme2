@@ -2,13 +2,18 @@
 <div class="page home">
   <div class="body">
     <div class="section">
-      <div class="register">
+      <div class="signup">
         <h1>{{title}}</h1>
-        <a href="#/signup_student" id="reg_choice">Student</a>
-        <a href="#/signup_kotbaas"id="reg_choice">Kotbaas</a>
+        <div class="signup__btns">
+          <div class="signup__btn">
+            <a href="#/signup_student" id="reg_choice" class="signup__btn button">Student</a>   
+          </div>
+          <div class="signup__btn">
+            <a href="#/signup_kotbaas" id="reg_choice" class="signup__btn button">Kotbaas</a>
+          </div>
+        </div>
       </div>
     </div>
-    Go to <a href="#/about" data-navigo>About page</a><br />
   </div>
 </div>
 {{> footer }}

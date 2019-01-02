@@ -15,6 +15,18 @@ export default () => {
   // Return the compiled template to the router
   update(compile(signupTemplate)({ title }));
 
+  const user = '';
+
+  // check for user
+  if(user){
+    // nothing
+  } else {
+    const nav = document.querySelectorAll('.user');
+    for (let i = 0; i < nav.length; i++){
+      nav[i].style.display = 'none';
+    }
+  }
+
   // Buttons
   const signupBtn = document.getElementById('signupBtn');
 

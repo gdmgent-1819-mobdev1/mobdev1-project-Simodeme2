@@ -12,7 +12,18 @@ export default () => {
   const title = 'Login';
   update(compile(signinTemplate)({ title }));
 
-  const signinBtn = document.getElementById('signinBtn');
+  // check for user
+  const user = '';
+  if(user){
+    // nothing
+  } else {
+    const nav = document.querySelectorAll('.user');
+    for (let i = 0; i < nav.length; i++){
+      nav[i].style.display = 'none';
+    }
+  }
+
+  const signinBtn = document.getElementById('signin__btn');
 
   function signin() {
     const email = document.getElementById('email').value;
